@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="vF9-mI-cYw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="88H-jR-6kg">
+            <objects>
+                <navigationController id="vF9-mI-cYw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hzt-iv-4Fl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QAb-OR-1Oq" kind="relationship" relationship="rootViewController" id="der-rn-JVv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9Z-Gz-anO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1044" y="85"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="r1J-Xj-dAq">
+            <objects>
+                <viewController id="QAb-OR-1Oq" customClass="ViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="sqC-V5-wgo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="QAb-OR-1Oq" id="7mJ-6J-WE6"/>
+                            <outlet property="delegate" destination="QAb-OR-1Oq" id="Kre-pm-5Ly"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="eP0-Xi-RoM">
+                        <barButtonItem key="rightBarButtonItem" title="下载" id="7hx-hJ-nPj">
+                            <connections>
+                                <segue destination="fho-H9-eUW" kind="push" id="fND-bk-UbQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="sqC-V5-wgo" id="31b-Op-8hd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hwT-gG-4NR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-276" y="84"/>
+        </scene>
+        <!--Down View Controller-->
+        <scene sceneID="noO-Cs-fDS">
+            <objects>
+                <viewController id="fho-H9-eUW" customClass="DownViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ayj-cq-BFb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <connections>
+                            <outlet property="dataSource" destination="fho-H9-eUW" id="04Y-9F-WMn"/>
+                            <outlet property="delegate" destination="fho-H9-eUW" id="PgA-wg-1Eq"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="bxa-Xg-5xH"/>
+                    <connections>
+                        <outlet property="myTableView" destination="ayj-cq-BFb" id="DQD-cH-Lwb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LxK-wD-PxC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="416.80000000000001" y="82.3088455772114"/>
+        </scene>
+    </scenes>
+</document>
